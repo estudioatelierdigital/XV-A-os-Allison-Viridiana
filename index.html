@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- 
+      ELEMENTOS EDITABLES FÁCILMENTE:
+      - Textos: Nombres, fechas, horarios, ubicaciones y frases (en las secciones correspondientes).
+      - Enlaces: Enlaces de Google Maps (ceremonia y recepción), enlaces de Amazon y Giftful, y número de WhatsApp.
+      - Fechas: Fecha de la cuenta regresiva y fecha límite de confirmación (18 de diciembre de 2026).
+      - Colores: Variables CSS en el archivo styles.css (enfocadas en resaltar tonos guinda/burgundy y acentos dorados/crema).
+      - Rutas de recursos: Carpeta 'assets/images/' para imágenes y 'assets/audio/' para el archivo de música ("Arrullo de estrellas" - Zoé).
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Allison Viridiana</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Reproductor de Música Ambiental -->
+    <audio id="bg-music" loop>
+        <source src="assets/audio/music.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <button id="music-toggle" class="music-btn" aria-label="Reproducir música">
+        <i class="fa-solid fa-music"></i>
+        <span class="music-tooltip">Música</span>
+    </button>
+
+    <!-- Pantalla de Bienvenida / Portada -->
+    <section id="portada" class="portada-section">
+        <div class="portada-overlay"></div>
+        <div class="portada-content">
+            <span class="sub-title-top">Mis 15 Años</span>
+            <h1 class="main-title">Allison Viridiana</h1>
+            <p class="portada-fecha">27 · 12 · 2026</p>
+            <button id="open-invitation" class="btn-primary">
+                <i class="fa-solid fa-envelope-open-text"></i> Abrir Invitación
+            </button>
+        </div>
+    </section>
+
+    <!-- Contenido Principal de la Invitación -->
+    <div id="main-content" class="main-container hidden">
+
+        <!-- Frase Especial -->
+        <section class="section quote-section">
+            <div class="card-box">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="quote-text">"Disfrutando el viaje, celebrando el destino."</p>
+                <div class="divider"></div>
+                <p class="quote-note">Los momentos más felices de la vida se vuelven inolvidables cuando se comparten con quienes más queremos. Gracias por formar parte de mi historia.</p>
+            </div>
+        </section>
+
+        <!-- SEPARADOR 1: Tiara -->
+        <div class="section-separator">
+            <img src="assets/ing/Tiara-removebg-preview.png" alt="Tiara decorativa" class="separator-img">
+        </div>
+
+        <!-- Cuenta Regresiva -->
+        <section class="section countdown-section">
+            <h2 class="section-title">Falta muy poco</h2>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Padres y Padrinos -->
+        <section class="section family-section">
+            <div class="card-box">
+                <div class="family-block">
+                    <h3>Mis Papás</h3>
+                    <p>Cindy Borja Rivera</p>
+                    <p>&amp;</p>
+                    <p>Juan Luis Lira Beltrán</p>
+                </div>
+                <div class="family-divider"></div>
+                <div class="family-block">
+                    <h3>Mis Padrinos</h3>
+                    <p>Alejandro Lira Beltrán</p>
+                    <p>&amp;</p>
+                    <p>Jannet Balderas Oliver</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos: Ceremonia y Recepción -->
+        <section class="section events-section">
+            <h2 class="section-title">¿Dónde y Cuándo?</h2>
+            
+            <div class="events-grid">
+                <!-- Ceremonia Religiosa -->
+                <div class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p class="event-time"><i class="fa-regular fa-clock"></i> 3:45 PM</p>
+                    <h4 class="event-place">Parroquia de Santo Domingo de Guzmán</h4>
+                    <p class="event-address">Av. Quetzalcoatl s/n, Santo Domingo Aztacameca, Axapusco, Estado de México</p>
+                    <a href="https://maps.app.goo.gl/rXiWQbi8zdx6dubx7" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-location-dot"></i> Ver Ubicación
+                    </a>
+                </div>
+
+                <!-- Recepción -->
+                <div class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-glass-cheers"></i>
+                    </div>
+                    <h3>Recepción</h3>
+                    <p class="event-time"><i class="fa-regular fa-clock"></i> 5:30 PM</p>
+                    <h4 class="event-place">Salón Quetzal</h4>
+                    <p class="event-address">Benito Juárez 22, Otumba Centro, Otumba de Gómez Farías, Estado de México</p>
+                    <a href="https://maps.app.goo.gl/jYebL7pZZaULoecv7" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-location-dot"></i> Ver Ubicación
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARADOR 2: Zapatilla -->
+        <div class="section-separator">
+            <img src="assets/ing/Zapatilla-removebg-preview.png" alt="Zapatilla decorativa" class="separator-img">
+        </div>
+
+        <!-- Itinerario -->
+        <section class="section itinerary-section">
+            <h2 class="section-title">Itinerario</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-church"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">3:45 PM</span>
+                        <h4>Ceremonia Religiosa</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">5:30 PM</span>
+                        <h4>Recepción de Invitados</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">9:00 PM</span>
+                        <h4>Vals y Momento Especial</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-music"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">10:00 PM</span>
+                        <h4>Inicio de Baile</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-moon"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">1:00 AM</span>
+                        <h4>Fin del Evento</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Código de Vestimenta -->
+        <section class="section dresscode-section">
+            <div class="card-box text-center">
+                <div class="event-icon">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+                <h3>Código de Vestimenta</h3>
+                <p class="dresscode-type">Formal</p>
+            </div>
+        </section>
+
+        <!-- Mesa de Regalos -->
+        <section class="section gifts-section">
+            <h2 class="section-title">Mesa de Regalos</h2>
+            <div class="card-box text-center">
+                <p class="gifts-message">
+                    Tu presencia es lo que más nos importa. Si gustas tener un detalle adicional, puedes encontrar algunas sugerencias en nuestra mesa de regalos en Amazon y Giftful:
+                </p>
+                <div class="gifts-buttons">
+                    <a href="https://www.amazon.com.mx/registries/gl/guest-view/2QNJV2RWXYQKG?ref_=cm_sw_r_apann_ggr-subnav-share_QF3CQA00RSF2CWPG9V7C&language=en-US" target="_blank" class="btn-gift amazon-btn">
+                        <i class="fa-brands fa-amazon"></i> Mesa Amazon
+                    </a>
+                    <a href="https://giftful.com/wishlists/Szl7urM0IwpKnmyvnlNM" target="_blank" class="btn-gift giftful-btn">
+                        <i class="fa-solid fa-gift"></i> Mesa Giftful
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARADOR 3: Carruaje -->
+        <div class="section-separator">
+            <img src="assets/ing/Carruaje-removebg-preview.png" alt="Carruaje decorativo" class="separator-img">
+        </div>
+
+        <!-- Confirmación de Asistencia (RSVP) -->
+        <section class="section rsvp-section">
+            <div class="card-box text-center">
+                <h2 class="section-title">Confirmación de Asistencia</h2>
+                <p class="rsvp-desc">
+                    Por favor confirma tu asistencia antes del <strong>18 de diciembre de 2026</strong>.
+                </p>
+                <a href="https://wa.me/5565103598?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Allison%20Viridiana.%20¡Allí%20estaré!" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER MARCA -->
+        <footer class="brand-section">
+            <div class="brand-divider"></div>
+            <img src="assets/ing/logo.png" alt="Logo Atelier Digital" class="brand-logo">
+            <p class="brand-created">Invitación creada por</p>
+            <h3 class="brand-name">ATELIER DIGITAL</h3>
+            <p class="brand-text">¿Te gustó esta invitación? Podemos personalizar una con tus fotos, colores, música, ubicación y confirmación por WhatsApp.</p>
+            <div class="brand-social">
+                <a href="https://www.instagram.com/atelier.digitalmx?igsh=M2k4cjhkeDNyZDQ3" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Atelier Digital">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1HRgm8RcM1/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Atelier Digital">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div> <!-- Cierre de #main-content -->
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
